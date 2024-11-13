@@ -1,0 +1,526 @@
+/* รีเซ็ตทั่วไป */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ร่างกายและการตั้งค่าเบื้องต้น */
+body {
+  
+  font-family: Arial, sans-serif;
+  /* background-color: #7c7c7c; */
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  min-height: 100vh;
+  
+}
+
+.container {
+  
+
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* เมนูนำทาง */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #7c7c7c5d;
+  height: 80px;
+}
+
+.nav-con {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+}
+
+.logo a {
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(19, 19, 19);
+  font-size: 2rem;
+}
+
+.logo img {
+  width: 70px;
+  margin-top: 10px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+}
+
+.menu li {
+  position: relative; /* สำหรับตำแหน่งเมนูดรอปดาวน์ */
+  margin-left: 30px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 0;
+}
+
+.menu li a::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  visibility: hidden;
+  background-color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu li a:hover::before {
+  width: 100%;
+  visibility: visible;
+}
+
+
+.Photography {
+  list-style: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  
+  background-color: #7c7c7c5d;
+  margin: 10px 0;
+  padding: 0;
+  display: none; /* ซ่อนเมนูย่อยโดยค่าเริ่มต้น */
+  z-index: 1; /* ทำให้เมนูย่อยอยู่ด้านบน */
+}
+
+.Photography li {
+  margin: 0;
+  padding: 0;
+  width: 150px;
+  background-color: #7c7c7c5d; 
+}
+
+.Photography li a {
+  color: #fff;
+  padding: 1rem;
+  text-decoration: none;
+  display: block;
+}
+
+.Photography li a:hover {
+  background-color: #575757;
+}
+
+/* แสดงเมนูย่อยเมื่อ hover */
+.menu > li:hover .Photography {
+ 
+  display: block;
+  pointer-events: none;
+  transition: all .2s ease-out;
+}
+.menu > li:hover {
+  pointer-events: auto; 
+}
+
+
+
+/* ภาพสไลด์ */
+.slider {
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  height: 950px;
+ 
+}
+
+.slider .myslider {
+  display: none;
+  
+}
+
+.slider .myslider img {
+  width: 100%;
+height: auto;
+  display: block;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  font-weight: bolder;
+  font-size: 18px;
+  transition: 0.6s ease;
+  user-select: none;
+  background-color: #7c7c7c5d;
+  color: white;
+}
+
+.prev {
+  left: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: #dfdfdf;
+  color: black;
+}
+
+/* ส่วน Pre-wedding */
+.pre-wedding {
+  max-width: 100%;
+  padding: 50px 0;
+  color: #7c7c7c;
+ 
+  background-color: #fff;
+}
+
+.pre-wedding h1 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 45px;
+}
+
+.col-photo {
+  display: grid;
+  text-align: center;
+  grid-template-columns: repeat(3,1fr);
+}
+.col-cinema {
+  display: grid;
+  text-align: center;
+  grid-template-columns: 4fr 4fr ;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between; /* กระจายพื้นที่ระหว่างไอเท็ม */
+  width: 100%; /* ให้ความกว้างเต็ม */
+}
+.card{
+  
+  width: 325px;
+  overflow: hidden;
+  margin: 20px; 
+  
+
+}
+
+
+.card img{
+  width: 100%;
+  height: auto;
+  
+
+}
+.card:hover {
+  transform: scale(1.05); /* ขยายการ์ดเมื่อ hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้การ์ดเมื่อ hover */
+}
+
+.card-content{
+  padding: 16px;
+}
+.card-content h3{
+  margin: 5px
+}
+.card-content p {
+  margin-top: 20px;
+}
+.card a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.card-content .btn{
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #e5e4e4;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 15px;
+  color: #575757;
+}
+
+.btn:hover{
+  background-color: #a9a9a9;
+  color:#fff
+}
+
+.bg{
+  width: 100%;
+  height: 500px;
+  background-image: url("../img/bg.JPG");
+  background-position: center;
+  background-attachment: fixed;
+color: #575757;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.Cinematography {
+  max-width: 100%;
+  padding-top: 50px;
+ 
+  color: #7c7c7c;
+  
+  background-color: #fff;
+  
+}
+
+.Cinematography h1 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 45px;
+}
+
+.card-cinema {
+  padding: 16px;
+}
+.card-cinema  h3{
+  margin: 5px
+}
+.card-cinema  p {
+  margin-top: 20px;
+}
+
+.card-cinema .btn{
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #e5e4e4;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 15px;
+  color: #575757;
+}
+.Photo{
+  color: #575757;
+  
+}
+.grid-photo{
+  
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(3,1);
+  gap: 2px;
+ 
+
+  
+
+}
+
+
+ .grid-photo img{
+  width: 100%;
+  height: 100%;
+ }
+
+ .tap-photography{
+  color: #575757;
+  margin-top: 150px;
+  
+ }
+
+
+ .tap {
+  display: flex;
+  justify-content: center; 
+  gap: 30px; 
+}
+
+button{
+  background: none;
+ border: none;
+ cursor: pointer;
+ font-weight: bold;
+  
+}
+button:hover{
+  color: #7c7c7c;
+}
+.bg-contact {
+  background-image:url(../img/1.JPG) ; 
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 650px;
+  
+}
+
+
+
+.contactme{
+  color: #fff;
+  margin-top: 300px;
+  
+  
+ }
+  
+
+ .contactme h2{
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  
+ }
+  
+  .contactme p{
+    font-size: 20px;
+    font-weight: lighter;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+
+      }
+
+  .contact{
+    color: #7c7c7c;
+    height: 500px;
+   
+ 
+    
+  }
+  .headcon{
+    font-size: 25px;
+    margin-top: 20px;
+  }
+  .percengrey{
+ 
+ margin: 20px 0;
+    
+  }
+  
+  .percengrey h2{
+    font-size: 25px;
+    background-color: #7c7c7c;
+    color: #fff;
+    width:150px;
+    display: flex;
+    justify-content: center;
+
+  }
+  .percengrey p{
+  font-size: 17px;
+  margin: 10px 0px;
+  }
+  .sc-con{
+    display: flex;
+    
+    gap: 15px;
+    margin-top: 10px;
+  }
+  .sc-con a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+text-decoration: none;
+    width: 40px;
+    height: 40px;
+    background-color:#7c7c7c;
+    border-radius: 20%
+  }
+
+  .sc-con a svg{
+    width: 30px;
+    height: 30px;
+    color: #ffffff;
+}
+
+.cinema{
+ 
+  color: #575757;
+  margin: 150px 0px;
+  height: auto;
+}
+ .box1{
+  display: grid;
+  
+   grid-template-columns: repeat(auto-fit,minmax(450px,1fr)) ;
+   gap: 20px; 
+   
+   
+    max-width: 1200px; 
+    animation: fade 0.5s;
+ }
+.box{
+  margin: 10px 15px;
+  
+  
+ 
+ 
+  
+}
+
+.tap-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* ใช้ auto-fill เพื่อให้การ์ดแสดงเต็มพื้นที่ */
+  gap: 10px; /* ระยะห่างระหว่างการ์ด */
+  justify-content: center;
+}
+
+.tap-name {
+  margin-top: 10px;
+  text-align: center;
+}
+
+
+.name-cinema{
+  display: flex;
+  justify-content: center;
+}
+.fadeup{
+  animation: fade 0.5s,appear linear;
+  animation-timeline: view();
+  animation-range: entry 10%;
+}
+
+@keyframes fade {
+  0%{
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+
+@keyframes appear {
+  from{
+    opacity: 0;
+    scale: 0.5;
+  }
+  to{
+    opacity: 1;
+    scale: 1;
+  }
+  
+}
+
+
+
+
