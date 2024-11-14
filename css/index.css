@@ -486,6 +486,10 @@ text-decoration: none;
   text-align: center;
 }
 
+.tap-name p {
+  margin-top: 10px;
+ 
+}
 
 .name-cinema{
   display: flex;
