@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+nav {
+  background-color: rgba(102, 101, 101, 0.959);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* ทำให้ navbar อยู่ข้างหน้า */
+}
+
+.navbar-brand img {
+  max-width: 70px;
+  height: auto;
+}
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 0;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0; /* ขยับเส้นใต้ให้อยู่ที่ขอบล่าง */
+  left: 50%;
+  transform: translateX(-50%);
+  visibility: hidden;
+  background-color: #ffffff; /* สีของเส้นใต้ */
+  transition: all 0.3s ease-in-out; /* การเปลี่ยนแปลงอย่างนุ่มนวล */
+}
+
+.nav-link:hover::before {
+  width: 100%; /* ขยายเส้นใต้เต็มขนาด */
+  visibility: visible; /* แสดงเส้นใต้เมื่อชี้ */
+}
+
+section {
+  position: relative;
+  z-index: 1; /* ให้ carousel อยู่ด้านหลัง navbar */
+  max-width: 100%; /* หรือกำหนดขนาดที่ต้องการ */
+  overflow: hidden; /* หลีกเลี่ยงภาพล้นออกจาก container */
+}
+.carousel-inner img {
+  width: 100%;
+  height: auto;
+}
+
+/* สไตล์ปกติ */
+.btn {
+  background-color: rgba(102, 101, 101, 0.959);
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease; /* เพิ่มการเปลี่ยนแปลงสี */
+}
+
+/* เมื่อชี้ปุ่ม */
+.btn:hover {
+  background-color: rgba(169, 169, 169, 0.9); /* สีเทาอ่อน */
+}
+
+.bg {
+  height: 50vh;
+  background-image: url("../img/bg.JPG");
+
+  background-attachment: fixed;
+  color: #575757;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* ให้ container ของ iframe มีอัตราส่วนคงที่ */
+.iframe-container {
+  position: relative;
+  padding-bottom: 56.25%; /* อัตราส่วน 16:9 */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+/* ให้ iframe ขยายเต็มพื้นที่ใน container */
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  background-color: rgba(102, 101, 101, 0.959);
+  color: white;
+  padding: 40px 0;
+}
+
+footer h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin-right: 10px;
+  text-align: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  background: white;
+  color: #212529;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sort-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.sort-btn:hover {
+  color: #7c7c7c;
+}
+
+#hover-card:hover {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2) !important;
+  transition: box-shadow 0.3s ease-in-out;
+  transform: scale(1.05);
+}
+.custom-card {
+  max-width: 300px; /* จำกัดความกว้างสูงสุด */
+  height: 400px; /* กำหนดความสูง */
+  margin: 0 auto; /* จัดการให้อยู่กลาง */
+}
+
+/* การตั้งค่าปกติ */
+.sort-btn {
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+.separator {
+  font-size: 16px;
+  margin: 0 5px; /* ระยะห่างระหว่างเครื่องหมาย / และปุ่ม */
+}
+
+/* ตั้งค่าให้ flexbox จัดให้ปุ่มและเครื่องหมาย / อยู่ในบรรทัดเดียวกัน */
+#sort-container {
+  white-space: nowrap; /* ไม่ให้แตกบรรทัด */
+}
+
+@media (max-width: 768px) {
+  .sort-btn {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    padding: 8px 10px;
+  }
+}
+
+.bg-contact {
+  background-image: url(../img/1.JPG);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 650px;
+}
+
+.contactme {
+  color: #ffffffc2;
+  margin-top: 250px;
+}
+
+.contactme h2 {
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.contactme p {
+  font-size: 20px;
+  font-weight: lighter;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.contact {
+  color: #7c7c7c;
+  height: 500px;
+}
+.sc-con {
+  display: flex;
+
+  gap: 15px;
+  margin-top: 10px;
+}
+.sc-con a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  background-color: #7c7c7c;
+  border-radius: 20%;
+}
+
+.sc-con a svg {
+  width: 30px;
+  height: 30px;
+  color: #ffffff;
+}
+
+.percengrey {
+  margin: 20px 0;
+}
+
+.percengrey h2 {
+  font-size: 25px;
+  background-color: #7c7c7c;
+  color: #fff;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+}
+.percengrey p {
+  font-size: 17px;
+  margin: 10px 0px;
+}
+.headcon {
+  font-size: 25px;
+  margin-top: 20px;
+}
+.fadeup{
+  animation: fade 0.5s,appear linear;
+  animation-timeline: view();
+  animation-range: entry 10%;
+}
+
+@keyframes fade {
+  0%{
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+
+@keyframes appear {
+  from{
+    opacity: 0;
+    scale: 0.5;
+  }
+  to{
+    opacity: 1;
+    scale: 1;
+  }
+  
+}
+
+.wrap {
+
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+

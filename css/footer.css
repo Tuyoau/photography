@@ -1,0 +1,60 @@
+footer{
+    background-color: #7c7c7c;
+    margin-top: auto; /* ดัน footer ไปด้านล่าง */
+    padding: 3rem;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start; /
+    
+
+}
+.blog-con{
+    display: grid;
+    
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 4rem;
+    
+    
+    
+}
+.footer-item p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.Copyrigh{
+    margin-top: 20px;
+   
+}
+.social{
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    
+    
+}
+.social a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: background-color 0.3s, transform 0.3s;
+  text-decoration: none;
+
+}
+.social a svg{
+    width: 24px;
+    height: 24px;
+    color: #7c7c7c;
+}
+
+.social a:hover{
+    background-color: #7c7c7c;
+}
+
+.social a:hover svg {
+    fill: #fff; /* Change icon color on hover */
+  }
