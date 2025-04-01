@@ -67,12 +67,13 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 
 function showContent(type) {
-    const cards = document.querySelectorAll('.card');
+    const cards = document.querySelectorAll('.col-12');
+
     cards.forEach(card => {
-        if (type === 'all') {
-            card.style.display = 'inline-block'; // แสดงการ์ดทั้งหมด
+        if (type === 'all' || card.getAttribute('data-type') === type) {
+            card.classList.remove('d-none'); // ใช้ Bootstrap class
         } else {
-            card.style.display = card.getAttribute('data-type') === type ? 'inline-block' : 'none'; // แสดงการ์ดที่ตรงกับประเภทที่เลือก
+            card.classList.add('d-none'); // ใช้ Bootstrap class
         }
     });
 }
@@ -80,3 +81,5 @@ function showContent(type) {
 // เรียกใช้งานฟังก์ชันเพื่อแสดงการ์ดทั้งหมดเริ่มต้น
 showContent('all');
  
+
+

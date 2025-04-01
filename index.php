@@ -47,20 +47,20 @@ require_once 'header.php'
           <div class="card " style="width: 100%">
             <img src="img/01.jpg" alt="">
             <div class="card-body">
-              <h3>ENGAGEMENT</h3>
-              <p>Beginning of a Journey</p>
-              <a href="" class="btn btn-secondary">See all</a>
+              <h3>PREWEDDING</h3>
+              <p>Be the best of you</p>
+              <a href="prewedding.php" class="btn btn-secondary">See all</a>
             </div>
           </div>
         </div>
 
         <div class="col-12 col-sm-4">
           <div class="card" style="width: 100%">
-            <img src="img/02.JPG" alt="">
+            <img src="img/02.jpg" alt="">
             <div class="card-body">
               <h3>ENGAGEMENT</h3>
               <p>Beginning of a Journey</p>
-              <a href="" class="btn btn btn-secondary">See all</a>
+              <a href="prewedding.php" class="btn btn btn-secondary">See all</a>
             </div>
           </div>
 
@@ -68,11 +68,11 @@ require_once 'header.php'
 
         <div class="col-12 col-sm-4">
           <div class="card" style="width: 100%">
-            <img src="img/03.JPG" alt="">
+            <img src="img/03.jpg" alt="">
             <div class="card-body">
-              <h3>ENGAGEMENT</h3>
-              <p>Beginning of a Journey</p>
-              <a href="" class="btn btn-secondary">See all</a>
+              <h3>WEDDING RECEPTION</h3>
+              <p>The Big Day</p>
+              <a href="prewedding.php" class="btn btn-secondary">See all</a>
             </div>
           </div>
         </div>
@@ -152,7 +152,7 @@ require_once 'header.php'
 require_once 'footer.php'
 ?>
   </section>
-
+  <script src="js/script.js"></script>
 </body>
 
 </html>
