@@ -33,13 +33,13 @@
                 <h2 class="">Address</h2>
                 <p>
                     198/19 Suksawat 30 Yak 10 <br>
-                    Bankpakok, Ratburanah <br>
+                    Bankpakok, Ratburana <br>
                     Thailand, Bangkok
                 </p>
             </div>
             <div class="percengrey">
                 <h2>Contact</h2>
-                <p><strong>Mail</strong>18percentgrey.studio@gmail.com</p>
+                <p><strong>Mail</strong>SalesRep@18percentgrey.co</p>
                 <p><strong>Tel</strong> 099 226 6166</p>
             </div>
 

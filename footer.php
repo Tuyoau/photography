@@ -20,11 +20,11 @@
             <div class="row text-center text-md-start">
                 <div class="col-md-4">
                     <h2>Address</h2>
-                    <p><i class="fas fa-map-marker-alt"></i> 198/19 Suksawat 30 Yak 10, Bankpakok, Ratburanah, Bangkok, Thailand</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 198/19 Suksawat 30 Yak 10, Bankpakok, Ratburana, Bangkok, Thailand</p>
                 </div>
                 <div class="col-md-4">
                     <h2>Contact</h2>
-                    <p><i class="fas fa-envelope"></i> 18percentgrey.studio@gmail.com</p>
+                    <p><i class="fas fa-envelope"></i> SalesRep@18percentgrey.co</p>
                     <p><i class="fas fa-phone"></i> 099 226 6166</p>
                     <div class="social-icons">
                         <a href="https://www.facebook.com/18percentgrey.studio" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
